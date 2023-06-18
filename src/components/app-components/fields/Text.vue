@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { PropType, ref, watch } from 'vue';
 
 const props = defineProps({
   placeholder: String,
@@ -34,6 +34,10 @@ const props = defineProps({
   appendIcon: String,
   clickeableAppend: Boolean,
   clickeablePrepend: Boolean,
+  fieldValue: {
+    type: [String, Number, Boolean, Object, Array, null] as PropType<unknown>,
+    default: undefined,
+  },
 });
 
 const emits = defineEmits(['contentChange', 'appendHandler'])
@@ -47,6 +51,12 @@ const updateContent = () => {
 const appendHandler = () => {
   emits('appendHandler', content.value);
 }
+
+watch(() => props.fieldValue, (newValue: any) => {
+    content.value = newValue;
+  },
+  { immediate: true }
+);
 
 const clearHandler = () => {
   content.value = ''

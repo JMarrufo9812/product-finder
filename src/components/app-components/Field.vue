@@ -1,6 +1,7 @@
 <template>
   <component 
-    :is="typeField" 
+    :is="typeField"
+    :fieldValue="fieldValue"
     :placeholder="placeholder"
     :prependIcon="prependIcon"
     :appendIcon="appendIcon"
@@ -12,10 +13,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { PropType, computed } from 'vue';
 import Text from '@/components/app-components/fields/Text.vue';
 
 const props = defineProps({
+  fieldValue: {
+    type: [String, Number, Boolean, Object, Array, null] as PropType<unknown>,
+    default: undefined,
+  },
   type: String,
   placeholder: String,
   prependIcon: String,
@@ -33,8 +38,8 @@ const typeField = computed(() => {
   }
 });
 
-const handleContentChange = (searchValue: any) => {
-  emits('contentChange', searchValue);
+const handleContentChange = (content: any) => {
+  emits('contentChange', content);
 };
 
 const appendHandler = () => {
