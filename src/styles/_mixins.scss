@@ -1,0 +1,39 @@
+// FLEX
+
+.flex {
+  display: flex;
+}
+
+.flex-block {
+  display: flex;
+  flex-direction: column;
+}
+
+// FLEX: ALIGN
+.align-center {
+  align-items: center;
+}
+
+// FLEX: JUSTIFY
+.justify-start {
+  justify-content: flex-start;
+}
+
+.text-start {
+  text-align: left;
+}
+
+.clickeable:hover {
+  cursor: pointer;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 1em;
+  background: #fff;
+  margin-top: 1em;
+}
+
+.no-bullets {
+  list-style: none;
+}

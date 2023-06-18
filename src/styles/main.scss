@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'app-components/AppBar';
+@import 'app-components/Field';
+@import 'app-components/CircleIcon';
+@import 'app-components/ListItems';
+
+@import 'view-components/Product';
+
+html, body {
+  background: #EAECEE ;
+  margin: 0 auto;
+  padding: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+// .app-container {
+// }
+
+// .app-content {  
+//   // margin-right: 20rem;
+//   // margin-left: 20rem;
+// }
+
+
+
+

@@ -1,0 +1,18 @@
+
+.circle-icon-box  {
+    display: inline-block;
+    background-color: #fff;
+    margin: .2em;
+    border-radius: 50%;
+  }
+  
+  .circle-icon {
+    color: white;
+    display: table-cell;
+    vertical-align: middle; 
+    text-align: center;
+    text-decoration: none;
+    height: 1.7em;
+    width: 1.7em;   
+    color: $primary-color;
+  }

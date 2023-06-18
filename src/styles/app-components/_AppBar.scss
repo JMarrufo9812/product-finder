@@ -1,0 +1,22 @@
+.app-bar {
+  transition: transform 0.3s ease-in-out;
+  background: $primary-color;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  
+.app-bar--hidden {
+  transform: translateY(-100%); 
+}
+
+.logo-app-bar {
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.orkestra-logo-app-bar {
+  width: 8em;
+  height: 2em;
+}

@@ -1,0 +1,19 @@
+.input-field {
+  background: white;
+	border: 1px solid #d6dadc;
+	border-radius: 3px;
+	display: flex;
+  height: 3em;
+  align-items: center;
+}
+
+.input-field .icon {
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.input-field input {
+  height: 80%;
+  width: 100%;
+  border: none;
+}
