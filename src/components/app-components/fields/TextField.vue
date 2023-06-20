@@ -59,6 +59,7 @@ watch(() => props.fieldValue, (newValue: any) => {
 );
 
 const clearHandler = () => {
+  emits('contentChange', '');
   content.value = ''
 };
 </script>

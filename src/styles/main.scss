@@ -29,14 +29,13 @@ html, body {
   padding: 0;
 }
 
-// .app-container {
-// }
-
-// .app-content {  
-//   // margin-right: 20rem;
-//   // margin-left: 20rem;
-// }
-
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content:center;
+  margin-left: 1em;
+  margin-right: 2em;
+}
 
 
 

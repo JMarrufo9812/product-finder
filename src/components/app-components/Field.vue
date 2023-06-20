@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { PropType, computed } from 'vue';
-import Text from '@/components/app-components/fields/Text.vue';
+import TextField from '@/components/app-components/fields/TextField.vue';
 
 const props = defineProps({
   fieldValue: {
@@ -33,8 +33,8 @@ const emits = defineEmits(['contentChange','appendHandler'])
 
 const typeField = computed(() => {
   switch (props.type) {
-    case 'text':
-      return Text;
+    case 'number':
+      return TextField;
   }
 });
 

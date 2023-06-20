@@ -4,21 +4,28 @@ import {
   type CustomPropertiesRequestConfig,
 } from '@/services/interfaces/request'
 import { ServerDirections } from '@/config/server-directions'
+import { IProduct } from '@/entities/interfaces/product';
+import { Product } from '@/entities/classes/product'
 
-function get() {
+function get({ page , limit, search }) {
     const options: CustomPropertiesRequestConfig = {
       url: ServerDirections.PRODUCTS,
       method: HttpMethod.GET,
+      params: {
+        page,
+        limit,
+        search,
+      }
     }
   
-    function map(data: any): any {
-    //   const activity = camelCaseKeys(data.activity as CommonActivity, {
-    //     deep: true,
-    //   }) as Activit
-      return data
+    function map(data: any): IProduct {
+      const productsList = data.products.data.map((product: IProduct) => {
+        return new Product(product)
+      })
+      return productsList
     }
   
-    return makeRequest<Any>(options, map)
+    return makeRequest<IProduct>(options, map)
   }
   
   const ProductService = {

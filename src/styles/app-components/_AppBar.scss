@@ -5,10 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-  
-.app-bar--hidden {
-  transform: translateY(-100%); 
+  top: 0;
 }
 
 .logo-app-bar {
